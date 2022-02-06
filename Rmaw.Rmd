@@ -1,0 +1,874 @@
+---
+title: "Aprende R desde Cero Para SIG (Basico - Avanzado)"
+author: "Ing. Gorky Florez Castillo"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    logo: PNG/Bio.png
+    social: [ "twitter", "facebook", "whatsapp", "instagram", "telegram", "linkedin", "pinterest" ]
+    source_code: "https://github.com/GorkyFlorez"
+    theme: cerulean
+
+---
+
+```{r setup, include=FALSE}
+#------------------------------------------------------------------------
+
+```
+
+# Modulo 01 
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### Presentación
+
+R es un lenguaje y ambiente de computación estadística. Es software libre, de fuentes abiertas y funciona en Linux, Mac y Windows por igual. En esencia R utiliza funciones agrupadas en paquetes con un objetivo común para hacer operaciones diversas con datos. Por ejemplo, el paquete ggplot2 tiene funciones para hacer gráficos, ape para hacer análisis filogenéticos, maps para dibujar mapas, nlme para ajustar y comprar modelos mixtos lineales y no lineales. Y así CRAN (Red Completa del Archivo de R) es una especie de central de abastos donde se regalan las piezas lego de cualquier forma y color que uno necesite.
+
+R es una maravilla por varias razones. No sólo permite hacer todo análisis estadístico imaginable y gráficas increíbles, también es una forma de mostrar, repetir y guardar paso por paso qué análisis y manejo de datos se hizo de principio a fin. R utiliza líneas de código que le dicen qué hacer; el código va acompañado de comentarios hechos por el autor explicando cada paso.  Todo se guarda en un script, un simple archivo de texto que cualquiera puede utilizar para entender o repetir un análisis determinado de principio a fin. Cualquiera, empezando por nosotros mismos tres días, seis meses o diez años después. Si no imaginan la utilidad de esto, busquen en su archivo personal cualquier análisis que involucre más de una pestaña en Excel y díganme, sin sudar frío, ¿cómo llegaron a los resultados?
+
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### Dirigido a {data-height=200} 
+
+Ingenieros civiles, ingenieros agrícolas, ingenieros mecánicos de fluidos, ingenieros ambientales y carreras afines, involucrados en el rubro de la Cartografía, hidrología y medio ambiente.
+
+### ¿QUE ES RSTUDIO PARA SIG? ¿POR QUE UTILIZARLO?
+
+R es un software libre acceso que trabaja mediante un lenguaje de programación, utilizando RStudio que es un emulador se puede trabajar los comandos para los Sistemas de Información Geográfica, es  multifuncional gracias a las librerías con las que millones de programadores desarrollan para facilitar procesos.
+
+RStudio proporciona una creciente gama de capacidades a través de sus funciones básicas y gracias a las librerías se puede desarrollar procesos mas complejos. Puede visualizar, gestionar, editar y analizar datos para mapas complejos. Permite manejar formatos de datos ráster y vectoriales a través de librerías.
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/librerias.png")
+```
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### Acceso y descarga del modulo 01 Aprende R desde Cero para SIG
+
+El proceso de inscripción es el siguiente:
+* Efectué el pago de acuerdo a la modalidad correspondiente.
+* Envíe el voucher de pago o constancia de la transferencia a: tuspres@gmail.com 
+* En un lapso máximo de 02 horas estaremos confirmando su correcta inscripción para darle acceso por un año.
+
+El repositorio de GitHub y el código subyacente de este panel se pueden encontrar en mi Github. [Perfil](https://github.com/GorkyFlorez)
+
+Este dashbaord se desarrolló utilizando [R Studio](https://www.rstudio.com/) y los siguientes paquetes:
+
+* [RMarkdown](https://rmarkdown.rstudio.com/) para análisis reproducibles en documentos de calidad
+*  [flexdashbaord](https://rmarkdown.rstudio.com/flexdashboard/) para formatear en RMarkdown
+* [DT](https://rstudio.github.io/DT/) para tablas interactivas
+* [crosstalk](https://rstudio.github.io/crosstalk/) para widgets html interactivos en RMarkdown
+
+
+Se presenta otros manuales y ejemplos del uso R para el Sistemas de Informacion Geograficas
+
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/2610/8MAxKm.png) 
+*  [Mapa de elevacion de la cuenca ](https://imagizer.imageshack.com/img923/5164/KWYuov.png) 
+* [Mapa de elevacion de la cuenca del Moche ](https://imagizer.imageshack.com/img923/4498/IdprQB.png) 
+* [Mapa de Tipo de Bosque de Madre de Dios](https://imagizer.imageshack.com/img923/7421/tD8EDu.png)
+* [Aviso de friaje - (SENAMHI)](https://gorkyflorez.github.io/Aviso_Friaje_MDD/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Calcule la tendencia de las luces nocturnas ](https://gorkyflorez.github.io/luces_nocturnas_GEE/) 
+* [Perdida de la cobertura boscosa en la cuenca chonta](https://gorkyflorez.github.io/Analisis_cambio_cobertura_boscosa_microcuenca_chonta/) 
+
+* [INCREMENTO DE TEMPERATURA DIURNA EN LA SELVA](https://gorkyflorez.github.io/Aviso_SENAMHI_155/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Índice de agua de diferencia normalizada Sentinel-2 (NDWI)](https://gorkyflorez.github.io/Google_Earth_Engine_NDWI_Dhaka/) 
+* [NDVI en Git de Madre de Dios 2013-2014](https://gorkyflorez.github.io/GEE_NDVI_MDD_Arequi/) 
+* [Modelo digital de elevación](https://gorkyflorez.github.io/GEE_DEM/)
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+
+### Temario del Modulo 01 Aprende R desde Cero para SIG - Basico {data-height=900}
+```{r fl}
+knitr::include_graphics("PNG/Modulo 01.jpg")
+```
+
+### Enlace {data-height=100}
+El Modulo estra comprimido en el siguente enlace de google Drive:
+* [Modulo 01 Aprende R desde Cero para SIG - Basico](https://drive.google.com/drive/folders/1zAxSE-QqB6M-ftckkC8Dsfp6aRnYkJIH?usp=sharing) 
+
+
+# Modulo 02
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### {data-height=100}
+```{r l}
+knitr::include_graphics("PNG/R.png")
+```
+
+### ¿QUE ES RSTUDIO PARA SIG? ¿POR QUE UTILIZARLO?
+
+R es un software libre acceso que trabaja mediante un lenguaje de programación, utilizando RStudio que es un emulador se puede trabajar los comandos para los Sistemas de Información Geográfica, es  multifuncional gracias a las librerías con las que millones de programadores desarrollan para facilitar procesos.
+
+RStudio proporciona una creciente gama de capacidades a través de sus funciones básicas y gracias a las librerías se puede desarrollar procesos mas complejos. Puede visualizar, gestionar, editar y analizar datos para mapas complejos. Permite manejar formatos de datos ráster y vectoriales a través de librerías.
+
+Una de las grandes ventajas de R, es su facilidad de conexión a base de datos mundiales como es el caso de Raster que maneja datos vectoriales del mundo, como también WorldClim y las altitudes, y también mencionar leaflet que podemos crear mapas temáticos con base de mapas en google
+
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### Dirigido a {data-height=200}
+
+Ingenieros civiles, ingenieros agrícolas, ingenieros mecánicos de fluidos, ingenieros ambientales y carreras afines, involucrados en el rubro de la Cartografía, hidrología y medio ambiente.
+
+### Ventajas
+R permite instalar numerosas librerías, una gran cantidad de ellos imprescindibles (raster, rgdal, rgeos, gtools, tidyverse,rnaturalearth,rnaturalearthdata,sf, reticulate,maptools,maps, ggplot2 ,ggspatial, rgeos, ggmap , leaflet, ggrepel, RColorBrewer,png,broom,leaflet.extras, leaflet.providers, leafem,htmlwidgets,sp,
+               readxl,mapview, viridis, Rgb, raster, rmarkdown… ).
+En caso que necesites crear tus propias herramientas, puedes modificar el software libremente, con la finalidad de realizar diferentes y mas especializadas.
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/cuenca_amazonas.png")
+```
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### Acceso y descarga del Modulo 02 Aprende R desde Cero para SIG- Segunda edicion
+
+El proceso de inscripción es el siguiente:
+* Efectué el pago de acuerdo a la modalidad correspondiente.
+* Envíe el voucher de pago o constancia de la transferencia a: tuspres@gmail.com 
+* En un lapso máximo de 02 horas estaremos confirmando su correcta inscripción para darle acceso por un año.
+
+El repositorio de GitHub y el código subyacente de este panel se pueden encontrar en mi Github. [Perfil](https://github.com/GorkyFlorez)
+
+Este dashbaord se desarrolló utilizando [R Studio](https://www.rstudio.com/) y los siguientes paquetes:
+
+* [RMarkdown](https://rmarkdown.rstudio.com/) para análisis reproducibles en documentos de calidad
+*  [flexdashbaord](https://rmarkdown.rstudio.com/flexdashboard/) para formatear en RMarkdown
+* [DT](https://rstudio.github.io/DT/) para tablas interactivas
+* [crosstalk](https://rstudio.github.io/crosstalk/) para widgets html interactivos en RMarkdown
+
+
+Se presenta otros manuales y ejemplos del uso R para el Sistemas de Informacion Geograficas
+
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/2610/8MAxKm.png) 
+*  [Mapa de elevacion de la cuenca ](https://imagizer.imageshack.com/img923/5164/KWYuov.png) 
+* [Mapa de elevacion de la cuenca del Moche ](https://imagizer.imageshack.com/img923/4498/IdprQB.png) 
+* [Mapa de Tipo de Bosque de Madre de Dios](https://imagizer.imageshack.com/img923/7421/tD8EDu.png)
+* [Mapa de Tipo de Clima de Madre de Dios](https://imagizer.imageshack.com/img922/436/KyzR7s.png)
+* [Mapa de Tipo de Fisiografia de Madre de Dios](https://imagizer.imageshack.com/img923/3254/QEo2gZ.png)
+* [Mapa de Tipo de Suelo de Madre de Dios](https://imagizer.imageshack.com/img923/8849/yKJ6MR.png)
+* [Mapa de elevacion del Peru](https://imagizer.imageshack.com/img924/2690/Cuoyeb.png)
+* [Mapa de elevacion del Peru aspecto](https://imagizer.imageshack.com/img923/4450/5YRvgL.png)
+* [Mapa de elevacion del Peru DEM](https://imagizer.imageshack.com/img924/293/TnuS2M.png)
+* [Mapa de Porcentialidad](https://imagizer.imageshack.com/img923/8053/49AeoF.png)
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/3958/ba69ML.png)
+* [Mapa de elevacion de la Rio Rimac](https://imagizer.imageshack.com/img923/1189/Tj5zVx.png)
+* [Mapa de elevacion de la cuenca del Amazonas hill](https://imagizer.imageshack.com/img924/5816/8sbd6P.png)
+* [Mapa de elevacion de la cuenca del Amazonas](https://imagizer.imageshack.com/img924/175/QwbJRc.png)
+* [Mapa de elevacion de Paraguay aspecto](https://imagizer.imageshack.com/img922/8089/Gj01IU.png)
+* [Aviso de friaje - (SENAMHI)](https://gorkyflorez.github.io/Aviso_Friaje_MDD/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Calcule la tendencia de las luces nocturnas ](https://gorkyflorez.github.io/luces_nocturnas_GEE/) 
+* [Perdida de la cobertura boscosa en la cuenca chonta](https://gorkyflorez.github.io/Analisis_cambio_cobertura_boscosa_microcuenca_chonta/) 
+
+* [INCREMENTO DE TEMPERATURA DIURNA EN LA SELVA](https://gorkyflorez.github.io/Aviso_SENAMHI_155/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Índice de agua de diferencia normalizada Sentinel-2 (NDWI)](https://gorkyflorez.github.io/Google_Earth_Engine_NDWI_Dhaka/) 
+* [NDVI en Git de Madre de Dios 2013-2014](https://gorkyflorez.github.io/GEE_NDVI_MDD_Arequi/) 
+* [Modelo digital de elevación](https://gorkyflorez.github.io/GEE_DEM/)
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+### Temario del Modulo 02 Aprende R desde Cero para SIG- Segunda edicion {data-height=900}
+```{r fll}
+knitr::include_graphics("PNG/Diapositiva3.jpg")
+```
+
+### Enlace {data-height=100}
+El Modulo estra comprimido en el siguente enlace de google Drive:
+* [Modulo 02 Aprende R desde Cero para SIG- Segunda edicion ](https://drive.google.com/drive/folders/1K74F4uhFTmfyjskp2_V0FqN5VgBK_PI5?usp=sharing) 
+
+
+# Modulo 03
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### {data-height=100}
+
+```{r laa}
+knitr::include_graphics("PNG/RR.png")
+```
+
+### Paquetes de R para trabajar con datos espaciales
+Gracias al código abierto se han desarrollado paquetes modulares (actualmente + de 13.500), que son complementos para temas específicos por la comunidad de desarrolladores.
+
+En R existen cientos de paquetes que se pueden emplear para manejar información geográfica, destacamos algunos:
+
+Datos vectoriales: mediante el paquete sf y el paquete sp.
+Datos ráster: mediante el paquete raster y stars.
+rgdal o maptools: se trata de un conjunto de herramientas pagar gestionar datos geográficos. Útiles por ejemplo para importar archivos shapefile.
+maps: para visualizar mapas.
+whiteboxR: Este repositorio incluye 400 herramientas para realizar análisis geoespacial. Es la  interfaz de R del programa de línea de comandos WhiteboxTools. Incluye herramientas para trabajar con teledetección y LiDAR. Más info aquí: https://github.com/giswqs/whiteboxR
+
+### {data-height=300}
+```{r lada}
+knitr::include_graphics("PNG/Cuencas Hidrograficas.png")
+```
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### Dirigido a {data-height=200}
+
+Ingenieros civiles, ingenieros agrícolas, ingenieros mecánicos de fluidos, ingenieros ambientales y carreras afines, involucrados en el rubro de la Cartografía, hidrología y medio ambiente.
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/Cuenca del huallaga.png")
+```
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/Precipitacion.png")
+```
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### Acceso y descarga del Modulo 03 Aprende R desde Cero para SIG datos vectoriales y raster
+
+El proceso de inscripción es el siguiente:
+* Efectué el pago de acuerdo a la modalidad correspondiente.
+* Envíe el voucher de pago o constancia de la transferencia a: tuspres@gmail.com 
+* En un lapso máximo de 02 horas estaremos confirmando su correcta inscripción para darle acceso por un año.
+
+El repositorio de GitHub y el código subyacente de este panel se pueden encontrar en mi Github. [Perfil](https://github.com/GorkyFlorez)
+
+Este dashbaord se desarrolló utilizando [R Studio](https://www.rstudio.com/) y los siguientes paquetes:
+
+* [RMarkdown](https://rmarkdown.rstudio.com/) para análisis reproducibles en documentos de calidad
+*  [flexdashbaord](https://rmarkdown.rstudio.com/flexdashboard/) para formatear en RMarkdown
+* [DT](https://rstudio.github.io/DT/) para tablas interactivas
+* [crosstalk](https://rstudio.github.io/crosstalk/) para widgets html interactivos en RMarkdown
+
+
+Se presenta otros manuales y ejemplos del uso R para el Sistemas de Informacion Geograficas
+
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/2610/8MAxKm.png) 
+*  [Mapa de elevacion de la cuenca ](https://imagizer.imageshack.com/img923/5164/KWYuov.png) 
+* [Mapa de elevacion de la cuenca del Moche ](https://imagizer.imageshack.com/img923/4498/IdprQB.png) 
+* [Mapa de Tipo de Bosque de Madre de Dios](https://imagizer.imageshack.com/img923/7421/tD8EDu.png)
+* [Mapa de Tipo de Clima de Madre de Dios](https://imagizer.imageshack.com/img922/436/KyzR7s.png)
+* [Mapa de Tipo de Fisiografia de Madre de Dios](https://imagizer.imageshack.com/img923/3254/QEo2gZ.png)
+* [Mapa de Tipo de Suelo de Madre de Dios](https://imagizer.imageshack.com/img923/8849/yKJ6MR.png)
+* [Mapa de elevacion del Peru](https://imagizer.imageshack.com/img924/2690/Cuoyeb.png)
+* [Mapa de elevacion del Peru aspecto](https://imagizer.imageshack.com/img923/4450/5YRvgL.png)
+* [Mapa de elevacion del Peru DEM](https://imagizer.imageshack.com/img924/293/TnuS2M.png)
+* [Mapa de Porcentialidad](https://imagizer.imageshack.com/img923/8053/49AeoF.png)
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/3958/ba69ML.png)
+* [Mapa de elevacion de la Rio Rimac](https://imagizer.imageshack.com/img923/1189/Tj5zVx.png)
+* [Mapa de elevacion de la cuenca del Amazonas hill](https://imagizer.imageshack.com/img924/5816/8sbd6P.png)
+* [Mapa de elevacion de la cuenca del Amazonas](https://imagizer.imageshack.com/img924/175/QwbJRc.png)
+* [Mapa de elevacion de Paraguay aspecto](https://imagizer.imageshack.com/img922/8089/Gj01IU.png)
+* [Aviso de friaje - (SENAMHI)](https://gorkyflorez.github.io/Aviso_Friaje_MDD/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Calcule la tendencia de las luces nocturnas ](https://gorkyflorez.github.io/luces_nocturnas_GEE/) 
+* [Perdida de la cobertura boscosa en la cuenca chonta](https://gorkyflorez.github.io/Analisis_cambio_cobertura_boscosa_microcuenca_chonta/) 
+
+* [INCREMENTO DE TEMPERATURA DIURNA EN LA SELVA](https://gorkyflorez.github.io/Aviso_SENAMHI_155/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Índice de agua de diferencia normalizada Sentinel-2 (NDWI)](https://gorkyflorez.github.io/Google_Earth_Engine_NDWI_Dhaka/) 
+* [NDVI en Git de Madre de Dios 2013-2014](https://gorkyflorez.github.io/GEE_NDVI_MDD_Arequi/) 
+* [Modelo digital de elevación](https://gorkyflorez.github.io/GEE_DEM/)
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+### Temario del Modulo 03 Aprende R desde Cero para SIG datos vectoriales y raster {data-height=900}
+```{r flls}
+knitr::include_graphics("PNG/Diapositiva4.jpg")
+```
+
+### Enlace {data-height=100}
+El Modulo estra comprimido en el siguente enlace de google Drive:
+* [03 Aprende R desde Cero para SIG datos vectoriales y raster ](https://drive.google.com/drive/folders/1dWCy34stA7RZIamTnsVpNO7w2qC0xIWm?usp=sharing) 
+
+
+# Modulo 04
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### {data-height=200}
+
+```{r lasffa}
+knitr::include_graphics("PNG/poster.jpg")
+```
+
+### El paquete raster
+El paquete raster permite manejar datos ráster con el objeto de clase RasterLayer. El raster se obtiene a partir de una matriz que contiene los valores de cada celda.
+
+En la última década, el paquete de R raster ha sido un claro dominante como paquete principal para el análisis raster: potente, flexible y escalable. Su modelo de datos es el de un ráster 2D o un conjunto de capas ráster.
+
+El paquete stars
+Muchos de los datos raster disponibles en la actualidad son dinámicos y vienen como series temporales de ráster para diferentes temas.
+
+Los datos raster recientes, como las imágenes de satélite, modelos climáticos o los datos de pronóstico del tiempo, que no caben en el almacenamiento local necesitan otro tipo de tratamiento. Existe un paquete para el análisis raster, denominado stars que:
+
+Permite representar pilas dinámicas de raster, además de las rejillas regulares, giradas, cortadas, rectilíneas y rasters curvilíneos.
+Proporciona una estrecha integración con el paquete sf.
+Sigue los principios de diseño tidyverse.
+Pretende ser escalable, también más allá del tamaño del disco local.
+Proporciona una mayor integración de las nuevas características de GDAL que otros paquetes de R.
+
+### {data-height=200}
+```{r ldfafyhyy}
+knitr::include_graphics("PNG/Mapa de altitud.png")
+```
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### Dirigido a {data-height=200}
+
+Ingenieros civiles, ingenieros agrícolas, ingenieros mecánicos de fluidos, ingenieros ambientales y carreras afines, involucrados en el rubro de la Cartografía, hidrología y medio ambiente.
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/Mapa de plantas de mexico.png")
+```
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/Mapa de Geomorfologia de Ancash.png")
+```
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### Acceso y descarga del Modulo 04 Aprende R desde Cero para SIG (Basico I )
+
+El proceso de inscripción es el siguiente:
+* Efectué el pago de acuerdo a la modalidad correspondiente.
+* Envíe el voucher de pago o constancia de la transferencia a: tuspres@gmail.com 
+* En un lapso máximo de 02 horas estaremos confirmando su correcta inscripción para darle acceso por un año.
+
+El repositorio de GitHub y el código subyacente de este panel se pueden encontrar en mi Github. [Perfil](https://github.com/GorkyFlorez)
+
+Este dashbaord se desarrolló utilizando [R Studio](https://www.rstudio.com/) y los siguientes paquetes:
+
+* [RMarkdown](https://rmarkdown.rstudio.com/) para análisis reproducibles en documentos de calidad
+*  [flexdashbaord](https://rmarkdown.rstudio.com/flexdashboard/) para formatear en RMarkdown
+* [DT](https://rstudio.github.io/DT/) para tablas interactivas
+* [crosstalk](https://rstudio.github.io/crosstalk/) para widgets html interactivos en RMarkdown
+
+
+Se presenta otros manuales y ejemplos del uso R para el Sistemas de Informacion Geograficas
+
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/2610/8MAxKm.png) 
+*  [Mapa de elevacion de la cuenca ](https://imagizer.imageshack.com/img923/5164/KWYuov.png) 
+* [Mapa de elevacion de la cuenca del Moche ](https://imagizer.imageshack.com/img923/4498/IdprQB.png) 
+* [Mapa de Tipo de Bosque de Madre de Dios](https://imagizer.imageshack.com/img923/7421/tD8EDu.png)
+* [Mapa de Tipo de Clima de Madre de Dios](https://imagizer.imageshack.com/img922/436/KyzR7s.png)
+* [Mapa de Tipo de Fisiografia de Madre de Dios](https://imagizer.imageshack.com/img923/3254/QEo2gZ.png)
+* [Mapa de Tipo de Suelo de Madre de Dios](https://imagizer.imageshack.com/img923/8849/yKJ6MR.png)
+* [Mapa de elevacion del Peru](https://imagizer.imageshack.com/img924/2690/Cuoyeb.png)
+* [Mapa de elevacion del Peru aspecto](https://imagizer.imageshack.com/img923/4450/5YRvgL.png)
+* [Mapa de elevacion del Peru DEM](https://imagizer.imageshack.com/img924/293/TnuS2M.png)
+* [Mapa de Porcentialidad](https://imagizer.imageshack.com/img923/8053/49AeoF.png)
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/3958/ba69ML.png)
+* [Mapa de elevacion de la Rio Rimac](https://imagizer.imageshack.com/img923/1189/Tj5zVx.png)
+* [Mapa de elevacion de la cuenca del Amazonas hill](https://imagizer.imageshack.com/img924/5816/8sbd6P.png)
+* [Mapa de elevacion de la cuenca del Amazonas](https://imagizer.imageshack.com/img924/175/QwbJRc.png)
+* [Mapa de elevacion de Paraguay aspecto](https://imagizer.imageshack.com/img922/8089/Gj01IU.png)
+* [Aviso de friaje - (SENAMHI)](https://gorkyflorez.github.io/Aviso_Friaje_MDD/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Calcule la tendencia de las luces nocturnas ](https://gorkyflorez.github.io/luces_nocturnas_GEE/) 
+* [Perdida de la cobertura boscosa en la cuenca chonta](https://gorkyflorez.github.io/Analisis_cambio_cobertura_boscosa_microcuenca_chonta/) 
+
+* [INCREMENTO DE TEMPERATURA DIURNA EN LA SELVA](https://gorkyflorez.github.io/Aviso_SENAMHI_155/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Índice de agua de diferencia normalizada Sentinel-2 (NDWI)](https://gorkyflorez.github.io/Google_Earth_Engine_NDWI_Dhaka/) 
+* [NDVI en Git de Madre de Dios 2013-2014](https://gorkyflorez.github.io/GEE_NDVI_MDD_Arequi/) 
+* [Modelo digital de elevación](https://gorkyflorez.github.io/GEE_DEM/)
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+### Temario del Modulo 04 Aprende R desde Cero para SIG (Basico I ) {data-height=900}
+```{r fllers}
+knitr::include_graphics("PNG/Diapositiva5.jpg")
+```
+
+### Enlace {data-height=100}
+El Modulo estra comprimido en el siguente enlace de google Drive:
+* [04 Aprende R desde Cero para SIG (Basico I ) ](https://drive.google.com/drive/folders/1196eSjBCykDP6fSP2Stgxb-DUYo-toC6?usp=sharing) 
+
+
+# Modulo 05
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### {data-height=200}
+
+```{r l1}
+knitr::include_graphics("PNG/1.jpg")
+```
+
+### Google Earth Engine
+
+Que es Google Earth Engine es una plataforma basada en la nube que permite a los usuarios tener un fácil acceso a un archivo de datos de teledetección a escala de petabytes y ejecutar análisis geoespaciales en la infraestructura de Google. Actualmente, Google ofrece soporte solo para Python y JavaScript. Rgee llenará el vacío comenzando a brindar apoyo a R. A continuación, encontrará la comparación entre la sintaxis de rgee y las dos bibliotecas cliente compatibles con Google.
+
+Los datos utilizados aquí provienen de INCREMENTO DE TEMPERATURA DIURNA EN LA SELVA (SENAMHI), que detalla el incremento de la temperatura en el Peru. En agosto. Estos datos se debe tratar con precaución.
+
+La metodología para la recopilación de datos se puede ver [aquí] (https://www.senamhi.gob.pe/?p=aviso-meteorologico-detalle-prueba&a=2021&b=2661&c=00&d=SENA).
+
+El objetivo princial de la presentacion es brindar las herramientas necesarias para poder representar datos cuantitativos y cualitativo en mapas vectoriales y raster.
+
+Este panel se desarrolló el 08 de agosto del 2021 y, por lo tanto, es una instantánea de los datos en esta simulacion.
+
+La información geográfica en cada distrito está distribuida por provincias y departamentos en el Perú.
+
+### {data-height=200}
+
+```{r l22}
+knitr::include_graphics("PNG/2.jpg")
+```
+
+### {data-height=200}
+
+```{r ldf23}
+knitr::include_graphics("PNG/3.jpg")
+```
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### Dirigido a {data-height=200}
+
+Ingenieros civiles, ingenieros agrícolas, ingenieros mecánicos de fluidos, ingenieros ambientales y carreras afines, involucrados en el rubro de la Cartografía, hidrología y medio ambiente.
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/4.jpg")
+```
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/5.jpg")
+```
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/6.jpg")
+```
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/7.jpg")
+```
+
+Column {data-width=200}
+-----------------------------------------------------------------------
+
+### Acceso y descarga del Modulo 05 Aprende R desde Cero para SIG (Avanza I)
+
+El proceso de inscripción es el siguiente:
+* Efectué el pago de acuerdo a la modalidad correspondiente.
+* Envíe el voucher de pago o constancia de la transferencia a: tuspres@gmail.com 
+* En un lapso máximo de 02 horas estaremos confirmando su correcta inscripción para darle acceso por un año.
+
+El repositorio de GitHub y el código subyacente de este panel se pueden encontrar en mi Github. [Perfil](https://github.com/GorkyFlorez)
+
+Este dashbaord se desarrolló utilizando [R Studio](https://www.rstudio.com/) y los siguientes paquetes:
+
+* [RMarkdown](https://rmarkdown.rstudio.com/) para análisis reproducibles en documentos de calidad
+*  [flexdashbaord](https://rmarkdown.rstudio.com/flexdashboard/) para formatear en RMarkdown
+* [DT](https://rstudio.github.io/DT/) para tablas interactivas
+* [crosstalk](https://rstudio.github.io/crosstalk/) para widgets html interactivos en RMarkdown
+
+
+Se presenta otros manuales y ejemplos del uso R para el Sistemas de Informacion Geograficas
+
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/2610/8MAxKm.png) 
+*  [Mapa de elevacion de la cuenca ](https://imagizer.imageshack.com/img923/5164/KWYuov.png) 
+* [Mapa de elevacion de la cuenca del Moche ](https://imagizer.imageshack.com/img923/4498/IdprQB.png) 
+* [Mapa de Tipo de Bosque de Madre de Dios](https://imagizer.imageshack.com/img923/7421/tD8EDu.png)
+* [Mapa de Tipo de Clima de Madre de Dios](https://imagizer.imageshack.com/img922/436/KyzR7s.png)
+* [Mapa de Tipo de Fisiografia de Madre de Dios](https://imagizer.imageshack.com/img923/3254/QEo2gZ.png)
+* [Mapa de Tipo de Suelo de Madre de Dios](https://imagizer.imageshack.com/img923/8849/yKJ6MR.png)
+* [Mapa de elevacion del Peru](https://imagizer.imageshack.com/img924/2690/Cuoyeb.png)
+* [Mapa de elevacion del Peru aspecto](https://imagizer.imageshack.com/img923/4450/5YRvgL.png)
+* [Mapa de elevacion del Peru DEM](https://imagizer.imageshack.com/img924/293/TnuS2M.png)
+* [Mapa de Porcentialidad](https://imagizer.imageshack.com/img923/8053/49AeoF.png)
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/3958/ba69ML.png)
+* [Mapa de elevacion de la Rio Rimac](https://imagizer.imageshack.com/img923/1189/Tj5zVx.png)
+* [Mapa de elevacion de la cuenca del Amazonas hill](https://imagizer.imageshack.com/img924/5816/8sbd6P.png)
+* [Mapa de elevacion de la cuenca del Amazonas](https://imagizer.imageshack.com/img924/175/QwbJRc.png)
+* [Mapa de elevacion de Paraguay aspecto](https://imagizer.imageshack.com/img922/8089/Gj01IU.png)
+* [Aviso de friaje - (SENAMHI)](https://gorkyflorez.github.io/Aviso_Friaje_MDD/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Calcule la tendencia de las luces nocturnas ](https://gorkyflorez.github.io/luces_nocturnas_GEE/) 
+* [Perdida de la cobertura boscosa en la cuenca chonta](https://gorkyflorez.github.io/Analisis_cambio_cobertura_boscosa_microcuenca_chonta/) 
+
+* [INCREMENTO DE TEMPERATURA DIURNA EN LA SELVA](https://gorkyflorez.github.io/Aviso_SENAMHI_155/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Índice de agua de diferencia normalizada Sentinel-2 (NDWI)](https://gorkyflorez.github.io/Google_Earth_Engine_NDWI_Dhaka/) 
+* [NDVI en Git de Madre de Dios 2013-2014](https://gorkyflorez.github.io/GEE_NDVI_MDD_Arequi/) 
+* [Modelo digital de elevación](https://gorkyflorez.github.io/GEE_DEM/)
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+### Temario del Modulo 05 Aprende R desde Cero para SIG (Avanza I) {data-height=900}
+```{r flsdsds}
+knitr::include_graphics("PNG/Diapositiva6.jpg")
+```
+
+### Enlace {data-height=100}
+El Modulo estra comprimido en el siguente enlace de google Drive:
+* [05 Aprende R desde Cero para SIG (Avanza I) ](https://drive.google.com/drive/folders/1ckA21ZLzciDZueK2j1Qpw9Ok4AKGIJY1?usp=sharing) 
+
+
+# Modulo 06
+
+Column {data-width=250}
+-----------------------------------------------------------------------
+
+### {data-height=200}
+
+```{r lwer}
+knitr::include_graphics("PNG/cuenca_moche_tmap_relieve.png")
+```
+
+### Tmap en R 
+Un aspecto satisfactorio e importante de la investigación geográfica es comunicar los resultados. La creación de mapas, el arte de la cartografía, es una habilidad antigua que implica comunicación, intuición y un elemento de creatividad. El mapeo estático en R es sencillo con la función plot(). Es posible crear mapas avanzados utilizando métodos base R (Murrell 2016). El enfoque de este capítulo, sin embargo, es la cartografía con paquetes de creación de mapas dedicados. Al aprender una nueva habilidad, tiene sentido adquirir conocimientos profundos en un área antes de expandirse. La creación de mapas no es una excepción, por lo tanto, la cobertura de este capítulo de un paquete (tmap) en profundidad en lugar de muchos superficialmente.
+
+Además de ser divertida y creativa, la cartografía también tiene importantes aplicaciones prácticas. Un mapa cuidadosamente elaborado puede ser la mejor manera de comunicar los resultados de su trabajo, pero los mapas mal diseñados pueden dejar una mala impresión. Los problemas comunes de diseño incluyen una mala ubicación, tamaño y legibilidad del texto y una selección descuidada de colores, como se describe en la guía de estilo del Journal of Maps. Además, la mala elaboración de mapas puede dificultar la comunicación de los resultados.
+
+### {data-height=200}
+```{r ldfbnm}
+knitr::include_graphics("PNG/Cuencas Cantaro en ggplot.png")
+```
+
+Column {data-width=250}
+-----------------------------------------------------------------------
+
+### Dirigido a {data-height=200}
+
+Ingenieros civiles, ingenieros agrícolas, ingenieros mecánicos de fluidos, ingenieros ambientales y carreras afines, involucrados en el rubro de la Cartografía, hidrología y medio ambiente.
+
+### 
+Los mapas se han utilizado durante varios miles de años para una amplia variedad de propósitos. Los ejemplos históricos incluyen mapas de edificios y propiedad de la tierra en la antigua dinastía babilónica hace más de 3000 años y el mapa mundial de Ptolomeo en su obra maestra Geografía hace casi 2000 años (Talbert 2014).
+
+Históricamente, la elaboración de mapas ha sido una actividad realizada únicamente por la élite o en su nombre. Esto ha cambiado con la aparición del software de mapas de código abierto, como el paquete R tmap y el 'compositor de impresión' en QGIS, que permiten a cualquiera crear mapas de alta calidad, lo que permite la 'ciencia ciudadana'. Los mapas también suelen ser la mejor manera de presentar los hallazgos de la investigación geocomputacional de una manera que sea accesible. Por lo tanto, la creación de mapas es una parte crítica de la geocomputación y su énfasis no solo en describir, sino también en cambiar el mundo.
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/cuenca_moche_tmap.png")
+```
+
+Column {data-width=300}
+-----------------------------------------------------------------------
+
+### Acceso y descarga del Modulo 06 Aprende R desde Cero para SIG (Avanza II)
+
+El proceso de inscripción es el siguiente:
+* Efectué el pago de acuerdo a la modalidad correspondiente.
+* Envíe el voucher de pago o constancia de la transferencia a: tuspres@gmail.com 
+* En un lapso máximo de 02 horas estaremos confirmando su correcta inscripción para darle acceso por un año.
+
+El repositorio de GitHub y el código subyacente de este panel se pueden encontrar en mi Github. [Perfil](https://github.com/GorkyFlorez)
+
+Este dashbaord se desarrolló utilizando [R Studio](https://www.rstudio.com/) y los siguientes paquetes:
+
+* [RMarkdown](https://rmarkdown.rstudio.com/) para análisis reproducibles en documentos de calidad
+*  [flexdashbaord](https://rmarkdown.rstudio.com/flexdashboard/) para formatear en RMarkdown
+* [DT](https://rstudio.github.io/DT/) para tablas interactivas
+* [crosstalk](https://rstudio.github.io/crosstalk/) para widgets html interactivos en RMarkdown
+
+
+Se presenta otros manuales y ejemplos del uso R para el Sistemas de Informacion Geograficas
+
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/2610/8MAxKm.png) 
+*  [Mapa de elevacion de la cuenca ](https://imagizer.imageshack.com/img923/5164/KWYuov.png) 
+* [Mapa de elevacion de la cuenca del Moche ](https://imagizer.imageshack.com/img923/4498/IdprQB.png) 
+* [Mapa de Tipo de Bosque de Madre de Dios](https://imagizer.imageshack.com/img923/7421/tD8EDu.png)
+* [Mapa de Tipo de Clima de Madre de Dios](https://imagizer.imageshack.com/img922/436/KyzR7s.png)
+* [Mapa de Tipo de Fisiografia de Madre de Dios](https://imagizer.imageshack.com/img923/3254/QEo2gZ.png)
+* [Mapa de Tipo de Suelo de Madre de Dios](https://imagizer.imageshack.com/img923/8849/yKJ6MR.png)
+* [Mapa de elevacion del Peru](https://imagizer.imageshack.com/img924/2690/Cuoyeb.png)
+* [Mapa de elevacion del Peru aspecto](https://imagizer.imageshack.com/img923/4450/5YRvgL.png)
+* [Mapa de elevacion del Peru DEM](https://imagizer.imageshack.com/img924/293/TnuS2M.png)
+* [Mapa de Porcentialidad](https://imagizer.imageshack.com/img923/8053/49AeoF.png)
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/3958/ba69ML.png)
+* [Mapa de elevacion de la Rio Rimac](https://imagizer.imageshack.com/img923/1189/Tj5zVx.png)
+* [Mapa de elevacion de la cuenca del Amazonas hill](https://imagizer.imageshack.com/img924/5816/8sbd6P.png)
+* [Mapa de elevacion de la cuenca del Amazonas](https://imagizer.imageshack.com/img924/175/QwbJRc.png)
+* [Mapa de elevacion de Paraguay aspecto](https://imagizer.imageshack.com/img922/8089/Gj01IU.png)
+* [Aviso de friaje - (SENAMHI)](https://gorkyflorez.github.io/Aviso_Friaje_MDD/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Calcule la tendencia de las luces nocturnas ](https://gorkyflorez.github.io/luces_nocturnas_GEE/) 
+* [Perdida de la cobertura boscosa en la cuenca chonta](https://gorkyflorez.github.io/Analisis_cambio_cobertura_boscosa_microcuenca_chonta/) 
+
+* [INCREMENTO DE TEMPERATURA DIURNA EN LA SELVA](https://gorkyflorez.github.io/Aviso_SENAMHI_155/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Índice de agua de diferencia normalizada Sentinel-2 (NDWI)](https://gorkyflorez.github.io/Google_Earth_Engine_NDWI_Dhaka/) 
+* [NDVI en Git de Madre de Dios 2013-2014](https://gorkyflorez.github.io/GEE_NDVI_MDD_Arequi/) 
+* [Modelo digital de elevación](https://gorkyflorez.github.io/GEE_DEM/)
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+### Temario del Modulo 06 Aprende R desde Cero para SIG (Avanza II) {data-height=900}
+```{r fluio}
+knitr::include_graphics("PNG/6 modulo actua.jpg")
+```
+
+### Enlace {data-height=100}
+El Modulo estra comprimido en el siguente enlace de google Drive:
+* [06 Aprende R desde Cero para SIG (Avanza II) ](https://drive.google.com/drive/folders/1QaFqc0aaDGNO34uyEmli_oZMSzoMueHj?usp=sharing) 
+
+
+
+# Modulo 07
+
+Column {data-width=250}
+-----------------------------------------------------------------------
+
+### {data-height=200}
+
+```{r FD}
+knitr::include_graphics("PNG/Bol_area.png")
+```
+
+### Imagenes satelitales en R 
+sen2r es un paquete de R que ayuda a descargar y preprocesar las imágenes Sentinel-2. Proporciona herramientas que permiten crear una cadena de procesamiento Sentinel-2 completa sin necesidad de intervenciones de otras herramientas o manuales. Además, posee una GUI muy intuitiva para la gente que no esté muy familiarizada con la programación en R.
+
+El código fuente del proyecto puede encontrarse en el repositorio de Github ranghetti/sen2r.
+
+¿Qué vamos a aprender?
+* Instalación de paquetes necesarios para el tratamiento de imágenes en R.
+* Descarga de imágenes de satélite
+* Cálculo de estadísticas de imágenes
+* Cálculo de índices aplicados a las imágenes
+También podrás encontrar más abajo los comandos que se utilizarán durante el webinar. De este modo solamente tendrás que copiar y pegar en RStudio y podrás replicar todo lo visto de manera más cómoda, a la vez que transcurre el webinar o posteriormente.
+
+Instalación de RStudio
+Utilizaremos RStudio durante el desarrollo del webinar.
+
+RStudio es un IDE de código abierto desarrollado para facilitar el trabajo con el lenguaje R que nos permite hacer scripts para análisis de datos, aplicaciones web interactivas, reportes, gráficos y, lo que más nos interesa a nosotros, añadir paquetes que nos permitirán hacer teledetección.
+
+Existe una versión libre y gratuita, con licencia AGPL v3, que puedes descargar desde aquí: https://rstudio.com/products/rstudio/download/
+
+### {data-height=200}
+```{r SD}
+knitr::include_graphics("PNG/bolivia_area.png")
+```
+
+Column {data-width=250}
+-----------------------------------------------------------------------
+
+### Dirigido a {data-height=200}
+
+Ingenieros civiles, ingenieros agrícolas, ingenieros mecánicos de fluidos, ingenieros ambientales y carreras afines, involucrados en el rubro de la Cartografía, hidrología y medio ambiente.
+
+### 
+Moderate-Resolution Imaging Spectroradiometer (MODIS) es un instrumento científico lanzado en órbita terrestre por la NASA en 1999 a bordo del satélite Terra (EOS AM) y en 2002 a bordo del satélite Aqua. Permite medir la temperatura de la superficie, los sedimentos y fitoplancton del océano, la cartografía de la vegetación global, detección de cambios en el territorio, características de nubosidad, concentraciones de aerosoles…
+
+El paquete MODIS es otro de los paquetes de R para trabajar con imágenes de satélite que nos permite procesar y obtener archivos de  LP DAAC, LAADS y NSIDC. Cuando se utiliza por primera vez requiere realizar unos pasos adicionales para configurar correctamente la herramienta.
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/Mapa elevacion tumbes.png")
+```
+
+Column {data-width=300}
+-----------------------------------------------------------------------
+
+### Acceso y descarga del Modulo 07 Aprende R desde Cero para SIG (Avanza I)
+
+El proceso de inscripción es el siguiente:
+* Efectué el pago de acuerdo a la modalidad correspondiente.
+* Envíe el voucher de pago o constancia de la transferencia a: tuspres@gmail.com 
+* En un lapso máximo de 02 horas estaremos confirmando su correcta inscripción para darle acceso por un año.
+
+El repositorio de GitHub y el código subyacente de este panel se pueden encontrar en mi Github. [Perfil](https://github.com/GorkyFlorez)
+
+Este dashbaord se desarrolló utilizando [R Studio](https://www.rstudio.com/) y los siguientes paquetes:
+
+* [RMarkdown](https://rmarkdown.rstudio.com/) para análisis reproducibles en documentos de calidad
+*  [flexdashbaord](https://rmarkdown.rstudio.com/flexdashboard/) para formatear en RMarkdown
+* [DT](https://rstudio.github.io/DT/) para tablas interactivas
+* [crosstalk](https://rstudio.github.io/crosstalk/) para widgets html interactivos en RMarkdown
+
+
+Se presenta otros manuales y ejemplos del uso R para el Sistemas de Informacion Geograficas
+
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/2610/8MAxKm.png) 
+*  [Mapa de elevacion de la cuenca ](https://imagizer.imageshack.com/img923/5164/KWYuov.png) 
+* [Mapa de elevacion de la cuenca del Moche ](https://imagizer.imageshack.com/img923/4498/IdprQB.png) 
+* [Mapa de Tipo de Bosque de Madre de Dios](https://imagizer.imageshack.com/img923/7421/tD8EDu.png)
+* [Mapa de Tipo de Clima de Madre de Dios](https://imagizer.imageshack.com/img922/436/KyzR7s.png)
+* [Mapa de Tipo de Fisiografia de Madre de Dios](https://imagizer.imageshack.com/img923/3254/QEo2gZ.png)
+* [Mapa de Tipo de Suelo de Madre de Dios](https://imagizer.imageshack.com/img923/8849/yKJ6MR.png)
+* [Mapa de elevacion del Peru](https://imagizer.imageshack.com/img924/2690/Cuoyeb.png)
+* [Mapa de elevacion del Peru aspecto](https://imagizer.imageshack.com/img923/4450/5YRvgL.png)
+* [Mapa de elevacion del Peru DEM](https://imagizer.imageshack.com/img924/293/TnuS2M.png)
+* [Mapa de Porcentialidad](https://imagizer.imageshack.com/img923/8053/49AeoF.png)
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/3958/ba69ML.png)
+* [Mapa de elevacion de la Rio Rimac](https://imagizer.imageshack.com/img923/1189/Tj5zVx.png)
+* [Mapa de elevacion de la cuenca del Amazonas hill](https://imagizer.imageshack.com/img924/5816/8sbd6P.png)
+* [Mapa de elevacion de la cuenca del Amazonas](https://imagizer.imageshack.com/img924/175/QwbJRc.png)
+* [Mapa de elevacion de Paraguay aspecto](https://imagizer.imageshack.com/img922/8089/Gj01IU.png)
+* [Aviso de friaje - (SENAMHI)](https://gorkyflorez.github.io/Aviso_Friaje_MDD/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Calcule la tendencia de las luces nocturnas ](https://gorkyflorez.github.io/luces_nocturnas_GEE/) 
+* [Perdida de la cobertura boscosa en la cuenca chonta](https://gorkyflorez.github.io/Analisis_cambio_cobertura_boscosa_microcuenca_chonta/) 
+
+* [INCREMENTO DE TEMPERATURA DIURNA EN LA SELVA](https://gorkyflorez.github.io/Aviso_SENAMHI_155/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Índice de agua de diferencia normalizada Sentinel-2 (NDWI)](https://gorkyflorez.github.io/Google_Earth_Engine_NDWI_Dhaka/) 
+* [NDVI en Git de Madre de Dios 2013-2014](https://gorkyflorez.github.io/GEE_NDVI_MDD_Arequi/) 
+* [Modelo digital de elevación](https://gorkyflorez.github.io/GEE_DEM/)
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+### Temario del Modulo 07 Aprende R desde Cero para SIG (Avanza I){data-height=900}
+```{r AS}
+knitr::include_graphics("PNG/Modulo 07.jpg")
+```
+
+### Enlace {data-height=100}
+El Modulo estra comprimido en el siguente enlace de google Drive:
+* [07 Aprende R desde Cero para SIG (Avanza I) ](https://drive.google.com/drive/folders/1CsDgGVyzw_1oreBlcxAyv_wuHTaen1bj) 
+
+
+
+# Modulo 08
+
+Column {data-width=250}
+-----------------------------------------------------------------------
+
+### {data-height=200}
+
+```{r FDeere}
+knitr::include_graphics("PNG/ARE.png")
+```
+
+### flexdashboard en R 
+Hoy nos complace anunciar el modulo de flexdashboard, un nuevo paquete que le permite crear fácilmente tableros flexibles, atractivos e interactivos con R. La creación y personalización de los tableros se realiza con R Markdown y, opcionalmente, puede incluir componentes Shiny para una interactividad adicional.
+
+El paquete flexdashboard ofrece la facilidad para crear tableros interactivos en R.
+
+Dentro de las características más resaltantes que menciona la documentación oficial podemos encontrar:
+
+* Uso de Rmarkdown para publicar un conjunto de visualizaciones en formato de tablero.
+* Es posible el uso de diversos componentes así como de los htmlwidgets.
+* Flexibilidad para colocar los componentes agrupados en columnas o filas.
+* Posibilidad para presentar secuencias de visualizaciones.
+* Posibilidad para integrar shiny y por lo tanto dinamismo en los componentes que se visualizan.
+
+### {data-height=200}
+```{r SDer}
+knitr::include_graphics("PNG/cas.png")
+```
+
+Column {data-width=250}
+-----------------------------------------------------------------------
+
+### Dirigido a {data-height=200}
+
+Ingenieros civiles, ingenieros agrícolas, ingenieros mecánicos de fluidos, ingenieros ambientales y carreras afines, involucrados en el rubro de la Cartografía, hidrología y medio ambiente.
+
+### 
+Los puntos destacados del paquete flexdashboard incluyen:
+
+Compatibilidad con una amplia variedad de componentes, incluidos widgets html interactivos; gráficos de base, celosía y cuadrícula; datos tabulados; manómetros; y cajas de valor.
+
+* Diseños basados en filas y columnas flexibles y fáciles de especificar. Los componentes se redimensionan de forma inteligente para llenar el navegador y se adaptan para su visualización en dispositivos móviles.
+
+* Amplio soporte para anotaciones de texto para incluir suposiciones, narrativa contextual y análisis dentro de los tableros.
+
+* Diseños de guión gráfico para presentar secuencias de visualizaciones y comentarios relacionados.
+
+De forma predeterminada, los paneles son documentos HTML estándar que se pueden implementar en cualquier servidor web o incluso adjuntar a un mensaje de correo electrónico. Opcionalmente, puede agregar componentes Shiny para una interactividad adicional y luego implementarlos en Shiny Server o shinyapps.io.
+
+### 
+```{r, out.width="50%"}
+# this is the original gif
+knitr::include_graphics("PNG/fors.png")
+```
+
+Column {data-width=300}
+-----------------------------------------------------------------------
+
+### Acceso y descarga del Modulo 08 Aprende R desde Cero para SIG (Avanza I)
+
+El proceso de inscripción es el siguiente:
+* Efectué el pago de acuerdo a la modalidad correspondiente.
+* Envíe el voucher de pago o constancia de la transferencia a: tuspres@gmail.com 
+* En un lapso máximo de 02 horas estaremos confirmando su correcta inscripción para darle acceso por un año.
+
+El repositorio de GitHub y el código subyacente de este panel se pueden encontrar en mi Github. [Perfil](https://github.com/GorkyFlorez)
+
+Este dashbaord se desarrolló utilizando [R Studio](https://www.rstudio.com/) y los siguientes paquetes:
+
+* [RMarkdown](https://rmarkdown.rstudio.com/) para análisis reproducibles en documentos de calidad
+*  [flexdashbaord](https://rmarkdown.rstudio.com/flexdashboard/) para formatear en RMarkdown
+* [DT](https://rstudio.github.io/DT/) para tablas interactivas
+* [crosstalk](https://rstudio.github.io/crosstalk/) para widgets html interactivos en RMarkdown
+
+
+Se presenta otros manuales y ejemplos del uso R para el Sistemas de Informacion Geograficas
+
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/2610/8MAxKm.png) 
+*  [Mapa de elevacion de la cuenca ](https://imagizer.imageshack.com/img923/5164/KWYuov.png) 
+* [Mapa de elevacion de la cuenca del Moche ](https://imagizer.imageshack.com/img923/4498/IdprQB.png) 
+* [Mapa de Tipo de Bosque de Madre de Dios](https://imagizer.imageshack.com/img923/7421/tD8EDu.png)
+* [Mapa de Tipo de Clima de Madre de Dios](https://imagizer.imageshack.com/img922/436/KyzR7s.png)
+* [Mapa de Tipo de Fisiografia de Madre de Dios](https://imagizer.imageshack.com/img923/3254/QEo2gZ.png)
+* [Mapa de Tipo de Suelo de Madre de Dios](https://imagizer.imageshack.com/img923/8849/yKJ6MR.png)
+* [Mapa de elevacion del Peru](https://imagizer.imageshack.com/img924/2690/Cuoyeb.png)
+* [Mapa de elevacion del Peru aspecto](https://imagizer.imageshack.com/img923/4450/5YRvgL.png)
+* [Mapa de elevacion del Peru DEM](https://imagizer.imageshack.com/img924/293/TnuS2M.png)
+* [Mapa de Porcentialidad](https://imagizer.imageshack.com/img923/8053/49AeoF.png)
+* [Mapa de elevacion de la cuenca del Moche](https://imagizer.imageshack.com/img924/3958/ba69ML.png)
+* [Mapa de elevacion de la Rio Rimac](https://imagizer.imageshack.com/img923/1189/Tj5zVx.png)
+* [Mapa de elevacion de la cuenca del Amazonas hill](https://imagizer.imageshack.com/img924/5816/8sbd6P.png)
+* [Mapa de elevacion de la cuenca del Amazonas](https://imagizer.imageshack.com/img924/175/QwbJRc.png)
+* [Mapa de elevacion de Paraguay aspecto](https://imagizer.imageshack.com/img922/8089/Gj01IU.png)
+* [Aviso de friaje - (SENAMHI)](https://gorkyflorez.github.io/Aviso_Friaje_MDD/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Calcule la tendencia de las luces nocturnas ](https://gorkyflorez.github.io/luces_nocturnas_GEE/) 
+* [Perdida de la cobertura boscosa en la cuenca chonta](https://gorkyflorez.github.io/Analisis_cambio_cobertura_boscosa_microcuenca_chonta/) 
+
+* [INCREMENTO DE TEMPERATURA DIURNA EN LA SELVA](https://gorkyflorez.github.io/Aviso_SENAMHI_155/) 
+*  [NDVI de Yungay](https://gorkyflorez.github.io/Google_Earth_Engine_RStudio_/) 
+* [Índice de agua de diferencia normalizada Sentinel-2 (NDWI)](https://gorkyflorez.github.io/Google_Earth_Engine_NDWI_Dhaka/) 
+* [NDVI en Git de Madre de Dios 2013-2014](https://gorkyflorez.github.io/GEE_NDVI_MDD_Arequi/) 
+* [Modelo digital de elevación](https://gorkyflorez.github.io/GEE_DEM/)
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+### Temario del Modulo 08 Aprende R desde Cero para SIG (Avanza I){data-height=900}
+```{r AsdfS}
+knitr::include_graphics("PNG/8 modulo.jpg")
+```
+
+### Enlace {data-height=100}
+El Modulo estra comprimido en el siguente enlace de google Drive:
+* [08 Aprende R desde Cero para SIG (Avanza I) ](https://drive.google.com/drive/folders/1Sun4gkTMq8fu_zgbfiZyl2E3hx7xOc0c)
